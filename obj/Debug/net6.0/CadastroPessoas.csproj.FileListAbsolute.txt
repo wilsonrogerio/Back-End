@@ -1,0 +1,15 @@
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\bin\Debug\net6.0\CadastroPessoas.exe
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\bin\Debug\net6.0\CadastroPessoas.deps.json
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\bin\Debug\net6.0\CadastroPessoas.runtimeconfig.json
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\bin\Debug\net6.0\CadastroPessoas.dll
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\bin\Debug\net6.0\CadastroPessoas.pdb
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.csproj.AssemblyReference.cache
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.GeneratedMSBuildEditorConfig.editorconfig
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.AssemblyInfoInputs.cache
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.AssemblyInfo.cs
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.csproj.CoreCompileInputs.cache
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.dll
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\refint\CadastroPessoas.dll
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.pdb
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\CadastroPessoas.genruntimeconfig.cache
+D:\CURSO DE PROGAMAÇAO\Back-End\CadastroPessoas\obj\Debug\net6.0\ref\CadastroPessoas.dll
