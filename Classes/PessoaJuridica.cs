@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using CadastroPessoas.Interfaces;
 
 namespace CadastroPessoas.Classes
@@ -9,6 +10,8 @@ namespace CadastroPessoas.Classes
         public string nome { get; set; }
 
         public float rendimento { get; set; }
+
+        public string cnpj {get; set;}
 
         public override float CalcularImposto(float rendimento)
         {
@@ -34,7 +37,32 @@ namespace CadastroPessoas.Classes
 
         public bool ValidarCnpj(string cnpj)
         {
-            throw new NotImplementedException();
+          bool retornoCnpjValido = Regex.IsMatch(cnpj, @"^(\d{14})|(\d{2}.\d{3}.\d{3}/\d{4}-\d{2}) $");
+          
+          if ( retornoCnpjValido)
+          {
+            string subStringCnpj14 = cnpj.Substring(8, 4);
+
+            if (subStringCnpj14 == "0001")
+            {
+                return true ;
+            }else{
+                return false;
+            }
+          }
+
+         string subStringCnpj18 = cnpj.Substring(11, 4);
+
+            if (subStringCnpj18 == "0001")
+            {
+                return true ;
+            }
+          return false;
         }
+
+          
+          
+          
+            // throw new NotImplementedException();
     }
 }
