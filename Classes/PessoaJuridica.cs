@@ -7,7 +7,7 @@ namespace CadastroPessoas.Classes
 
     {
         
-        public string nome { get; set; }
+        public string razaoSocial { get; set; }
 
         public float rendimento { get; set; }
 
