@@ -18,6 +18,20 @@ namespace CadastroPessoas.Classes
             Console.ResetColor(); //restaura a cor do console
 
         }
+        public static void VerificarPastaArquivo(string Caminho)
+        {
+            string pasta = Caminho.Split("/")[0];
+
+            if (!Directory.Exists(pasta))
+            {
+                Directory.CreateDirectory(pasta);
+            }
+
+            if (!File.Exists(Caminho))
+            {
+                using (File.Create(Caminho)) {};
+            }
+        }
 
 
 

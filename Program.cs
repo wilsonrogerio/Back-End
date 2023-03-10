@@ -76,41 +76,77 @@ do
                 switch (opcaoPJ)
                 {
                     case "1":
+
+
                         PessoaJuridica novoPJ = new PessoaJuridica();
                         Endereco novoEndPJ = new Endereco();
 
                         Console.Clear();
-                        Console.WriteLine("Digite o nome da razao social");
-                        novoPJ.razaoSocial = Console.ReadLine();
+                        // Console.WriteLine("Digite o nome da razao social");
+                        // novoPJ.razaoSocial = Console.ReadLine();
 
-                        Console.WriteLine("Digite seu CNPJ");
-                        novoPJ.cnpj = Console.ReadLine();
+                        // StreamWriter sw = new StreamWriter($"{novoPJ.razaoSocial}.txt");
+                        // sw.WriteLine(novoPJ.razaoSocial);
+                        // sw.Close();
 
-                        Console.WriteLine("Digite o rendimento da empresa");
-                        string? rendEntrada = Console.ReadLine();
-                        //convertendo de string para float.
-                        float.TryParse(rendEntrada, out float rendConvertido);
-                        novoPJ.rendimento = rendConvertido;
+                        // using (StreamWriter sw = new StreamWriter($"{novoPJ.razaoSocial}.txt"))
+                        // {
+                        //     sw.WriteLine(novoPJ.razaoSocial);
+                        // }
 
-                        //Endereço
-                        Console.WriteLine("Digite o nome da rua");
-                        novoEndPJ.logradouro = Console.ReadLine();
 
-                        Console.WriteLine("Digite o Numero");
-                        string? numEntrada = Console.ReadLine();
-                        int.TryParse(numEntrada, out int numConvertido);
-                        novoEndPJ.numero = numConvertido;
+                        // Console.WriteLine("Digite seu CNPJ");
+                        // novoPJ.cnpj = Console.ReadLine();
 
-                        novoPJ.end = novoEndPJ;
+                        // Console.WriteLine("Digite o rendimento da empresa");
+                        // string? rendEntrada = Console.ReadLine();
+                        // //convertendo de string para float.
+                        // float.TryParse(rendEntrada, out float rendConvertido);
+                        // novoPJ.rendimento = rendConvertido;
 
-                        listaPj.Add(novoPJ);
+                        // //Endereço
+                        // Console.WriteLine("Digite o nome da rua");
+                        // novoEndPJ.logradouro = Console.ReadLine();
 
-                        Console.WriteLine("Cadastrado com sucesso");
-                        Console.WriteLine("Pressione qualquer tecla para sair");
-                        Console.ReadLine();
+                        // Console.WriteLine("Digite o Numero");
+                        // string? numEntrada = Console.ReadLine();
+                        // int.TryParse(numEntrada, out int numConvertido);
+                        // novoEndPJ.numero = numConvertido;
 
-                        Thread.Sleep(1000);
+                        // novoPJ.end = novoEndPJ;
 
+                        // listaPj.Add(novoPJ);
+
+                        // Console.WriteLine("Cadastrado com sucesso");
+                        // Console.WriteLine("Pressione qualquer tecla para sair");
+                        // Console.ReadLine();
+
+                        // Thread.Sleep(1000);  
+
+                        novoPJ.razaoSocial = "Wilson";
+                        novoPJ.cnpj = "60.876.486/0001-58";
+
+                        novoPJ.Inserir(novoPJ);
+
+
+
+                        Console.WriteLine("Cadastro concluido");
+
+                        //     novoPJ.rendimento = 4500.50f;
+
+                        //     novoEndPJ.logradouro = "gilberto kun";
+                        //     novoEndPJ.numero = 169;
+                        //     novoEndPJ.complemento = "esquina";
+                        //     novoEndPJ.endComercial = false;
+
+                        //     novoPJ.end = novoEndPJ;
+
+                        //     Console.WriteLine(@$"
+                        // Nome: {novoPJ.nome}
+                        // Endereço: {novoEndPJ.logradouro} Num:{novoEndPJ.numero}
+                        // CNPJ:{novoPJ.cnpj} - Valido: {novoPJ.ValidarCnpj(novoPJ.cnpj)}
+                        // "
+                        //     );
 
 
                         break;
@@ -119,29 +155,63 @@ do
 
                         Console.Clear();
 
-                        if (listaPj.Count > 0)
-                        {
-                        foreach (PessoaJuridica cadaPJ in listaPj)
-                        {
+                        PessoaJuridica novoPJ2 = new PessoaJuridica();
+                        List<PessoaJuridica> listaExibicaoPj = novoPJ2.LerArquivo();
 
-                            Console.Clear();
+                        foreach (var cadaItem in listaExibicaoPj)
+                        {
                             Console.WriteLine(@$"
-                        Razao socila: {cadaPJ.razaoSocial}
-                        Endereço: {cadaPJ.end.logradouro} Num:{cadaPJ.end.numero}
-                        CNPJ:{cadaPJ.cnpj} - Valido: {cadaPJ.ValidarCnpj(cadaPJ.cnpj)}
-                        "
-                             );
+                            Razao social :{cadaItem.razaoSocial}
+                            CNPJ:{cadaItem.cnpj}
+                            ");
+                            Console.WriteLine("Leitura OK");
+                            Console.WriteLine("tecle algo para continuar");
+                            Console.ReadLine();
+                            Console.Clear();
 
                         }
 
-                        Console.WriteLine("Pressione qualquer tecla para sair");
-                        Console.ReadLine();
-                            
-                        }else{
-                            Console.WriteLine("Lista esta vazia");
-                            Thread.Sleep(4000);
-                        }
+
+                        // using (StreamReader sr = new StreamReader("Senai-Me.txt"))
+                        // {
+
+                        //     string? linha;
+                        //     while ((linha = sr.ReadLine()) != null)
+                        //     {
+                        //         //    linha = sr.ReadLine();
+                        //         Console.WriteLine($"{linha}");
+                        //     }
+                        //     Console.ReadLine();
+                        // }
+
+                        // if (listaPj.Count > 0)
+                        // {
+                        //     foreach (PessoaJuridica cadaPJ in listaPj)
+                        //     {
+
+                        //         Console.Clear();
+                        //         Console.WriteLine(@$"
+                        //         Razao socila: {cadaPJ.razaoSocial}
+                        //         Endereço: {cadaPJ.end.logradouro} Num:{cadaPJ.end.numero}
+                        //         CNPJ:{cadaPJ.cnpj} - Valido: {cadaPJ.ValidarCnpj(cadaPJ.cnpj)}
+                        //         "
+                        //          );
+
+                        //     }
+
+                        //     Console.WriteLine("Pressione qualquer tecla para sair");
+                        //     Console.ReadLine();
+
+                        // }
+                        // else
+                        // {
+                        //     Console.WriteLine("Lista esta vazia");
+                        //     Thread.Sleep(4000);
+                        // }
                         
+                        Console.WriteLine("Leitura todal completa");
+                        Console.ReadLine();
+
 
 
                         break;
@@ -160,40 +230,6 @@ do
                         break;
                 }
             } while (opcaoPJ != "0");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             //     novaPf.nome = "Wilson";
             //     novaPf.cpf = "12345";
@@ -223,26 +259,8 @@ do
             break;
 
         case "2":
+            Console.WriteLine($"Pessoa Fisica");
 
-            Console.WriteLine($"Pessoa Juridica");
-
-        //     novoPJ.nome = "Wilson";
-        //     novoPJ.cnpj = "60.876.486/0001-58";
-        //     novoPJ.rendimento = 4500.50f;
-
-        //     novoEndPJ.logradouro = "gilberto kun";
-        //     novoEndPJ.numero = 169;
-        //     novoEndPJ.complemento = "esquina";
-        //     novoEndPJ.endComercial = false;
-
-        //     novoPJ.end = novoEndPJ;
-
-        //     Console.WriteLine(@$"
-        // Nome: {novoPJ.nome}
-        // Endereço: {novoEndPJ.logradouro} Num:{novoEndPJ.numero}
-        // CNPJ:{novoPJ.cnpj} - Valido: {novoPJ.ValidarCnpj(novoPJ.cnpj)}
-        // "
-        //     );
 
             Console.WriteLine($"Pressione qualquer tecla para sair");
 
@@ -267,23 +285,6 @@ do
     }
 
 } while (opcao != "0");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // PessoaFisica novaPf = new PessoaFisica();
 // Endereco novoEndPF = new Endereco();
