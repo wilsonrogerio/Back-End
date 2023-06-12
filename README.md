@@ -1,6 +1,6 @@
 # ClientLab
 
-##Aplicativo de console
+## Descrição:
 
 Sistema de cadastro de Pessoas fisicas e juridicas 
 
